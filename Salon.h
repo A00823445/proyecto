@@ -35,7 +35,7 @@ class Salon{
     int clavesalon;
 };
 
-Salon::Salon(int salon, int clavesalon, int edificio, int piso) {
+Salon::Salon(int edificio, int piso, int salon, int clavesalon) {
     this -> salon = salon;
     this -> clavesalon = clavesalon;
     this -> edificio = edificio;
@@ -84,7 +84,7 @@ void Salon::setClavesalon(int clavesalon) {
 
 void Salon::muestra() {
 
-    cout <<  "Salon: " << salon << "        clave Salon: " << clavesalon << "       edificio: " << edificio << "        salon: " << salon;
+    cout <<  "Salon: " << salon << "        clave Salon: " << clavesalon << "       edificio: " << edificio << "        salon: " << salon << endl;
 
 }
 

@@ -41,7 +41,7 @@ Alumno::Alumno() {
 
 }
 
-Alumno::Alumno(string nombre, int matricula, int semestre) {
+Alumno::Alumno(int matricula, int semestre, string nombre) {
     this -> nombre = nombre;
     this -> semestre = semestre;
     this -> matricula = matricula;
@@ -72,7 +72,7 @@ void Alumno::setSemestre(int semestre) {
 }
 
 void Alumno::muestra() {
-    cout << "nombre: " << nombre << "       matricula: " << matricula << "       semestre: " << semestre;
+    cout << "nombre: " << nombre << "       matricula: " << matricula << "       semestre: " << semestre << endl;
 }
 
 
