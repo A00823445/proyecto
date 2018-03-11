@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/Alumno.h
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Alumno.h
 string
 -
 
-C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/Hora.h
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Hora.h
 
-C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/Salon.h
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Salon.h
 
-C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/main.cpp
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/main.cpp
 iostream
 -
 Hora.h
-C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/Hora.h
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Hora.h
 Alumno.h
-C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/Alumno.h
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Alumno.h
 Salon.h
-C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/Salon.h
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Salon.h
 
