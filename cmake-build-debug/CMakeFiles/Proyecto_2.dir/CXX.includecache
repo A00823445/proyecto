@@ -10,6 +10,12 @@ C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Alumno.h
 string
 -
 
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Clases.h
+Hora.h
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Hora.h
+string
+-
+
 C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Hora.h
 
 C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Salon.h
@@ -17,10 +23,16 @@ C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Salon.h
 C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/main.cpp
 iostream
 -
+fstream
+-
+string
+-
 Hora.h
 C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Hora.h
 Alumno.h
 C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Alumno.h
 Salon.h
 C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Salon.h
+Clases.h
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/proyecto/Clases.h
 

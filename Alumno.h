@@ -14,7 +14,7 @@ class Alumno{
     public:
     //Constructor por dafult y por parametros
     Alumno();
-    Alumno(string, int, int);
+    Alumno(int, int, string);
 
     //Metodos de acceso y modificacion
     string getNombre();

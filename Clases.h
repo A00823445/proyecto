@@ -99,4 +99,5 @@ void Clases::setClaveClase(int claveClase) {
 
 
 
+
 #endif //PROYECTO_2_CLASES_H
