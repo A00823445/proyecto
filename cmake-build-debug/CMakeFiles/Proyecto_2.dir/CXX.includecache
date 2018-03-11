@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/Alumno.h
+string
+-
+
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/Hora.h
+
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/Salon.h
+
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/main.cpp
+iostream
+-
+Hora.h
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/Hora.h
+Alumno.h
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/Alumno.h
+Salon.h
+C:/Users/Jesus Anaya/Dropbox/Clases/Semestre 2/POO/Proyecto 2/Salon.h
+
