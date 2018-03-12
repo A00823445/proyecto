@@ -21,6 +21,8 @@ class Clases{
     string getNombreMateria();
     int getClaveSalon();
     int getClaveClase();
+    int getListaAlumno(int);
+    int getPos();
 
     //Metodos de modificacion
     void setHoraEnt(Hora);
@@ -28,6 +30,11 @@ class Clases{
     void setNombreMateria(string);
     void setClaveSalon(int);
     void setClaveClase(int);
+    void setPos(int);
+
+    //Metodos de operacion
+    bool agregar(int, int);
+
 
     private:
     Hora horaEnt;
@@ -37,7 +44,7 @@ class Clases{
     int claveClase;
     int numLugares;
     int listaAlumno[10];
-
+    int pos;
 
 };
 
@@ -48,7 +55,7 @@ Clases::Clases() {
     claveSalon = 0;
     claveClase = 0;
     numLugares = 0;
-
+    pos = 0;
     for (int i = 0; i < 10; i++) {
         listaAlumno[i] = 0;
     }
@@ -96,8 +103,41 @@ void Clases::setClaveClase(int claveClase) {
     this -> claveClase = claveClase;
 }
 
+bool Clases::agregar(int claveSalon, int matricula) {
 
+    if(claveSalon != this -> claveSalon){
+        cout << "La clave del salon es incorrecta" << endl;
+        return false;
+    }
+    if (numLugares >= 10){
+        cout << "Ya no hay lugares disponibles: " << endl;
+        return false;
+    }
 
+    for (int i = 0; i < numLugares; i++) {
+        if (listaAlumno[i] == matricula) {
+            cout << "Ya hay alguien con esa matricula" << endl;
+            return false;
+        }
+    }
+
+    listaAlumno[numLugares] = matricula;
+    numLugares++;
+
+    return true;
+}
+
+int Clases::getListaAlumno(int i) {
+    return listaAlumno[i];
+}
+
+int Clases::getPos() {
+    return pos;
+}
+
+void Clases::setPos(int pos) {
+    this -> pos = pos;
+}
 
 
 #endif //PROYECTO_2_CLASES_H

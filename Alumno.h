@@ -72,7 +72,7 @@ void Alumno::setSemestre(int semestre) {
 }
 
 void Alumno::muestra() {
-    cout << "nombre: " << nombre << "       matricula: " << matricula << "       semestre: " << semestre << endl;
+  cout << "Matricula: " << matricula << "       semestre: " << semestre << "        nombre: " << nombre << endl;
 }
 
 

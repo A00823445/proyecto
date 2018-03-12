@@ -84,7 +84,7 @@ void Salon::setClavesalon(int clavesalon) {
 
 void Salon::muestra() {
 
-    cout <<  "Salon: " << salon << "        clave Salon: " << clavesalon << "       edificio: " << edificio << "        piso: " << piso << endl;
+    cout << "Edificio: " << edificio << "       piso: " << piso << "        salon: " << salon << "      clave salon: " << clavesalon << endl;
 
 }
 
