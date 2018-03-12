@@ -23,6 +23,7 @@ class Clases{
     int getClaveClase();
     int getListaAlumno(int);
     int getPos();
+    int getNumLugares();
 
     //Metodos de modificacion
     void setHoraEnt(Hora);
@@ -31,6 +32,7 @@ class Clases{
     void setClaveSalon(int);
     void setClaveClase(int);
     void setPos(int);
+
 
     //Metodos de operacion
     bool agregar(int, int);
@@ -137,6 +139,10 @@ int Clases::getPos() {
 
 void Clases::setPos(int pos) {
     this -> pos = pos;
+}
+
+int Clases::getNumLugares() {
+    return numLugares;
 }
 
 

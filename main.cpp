@@ -13,7 +13,7 @@ int main(){
 
     //Declaracion de variables
     int op, clavesalon, minutose, minutoss, pos = 0, pos2 = 0;
-    bool flag = true, flag2 = true, flag3 = false, flag4 = false, flag5 = true;
+    bool flag = true, flag2 = true, flag3 = false, flag4 = false, flag5 = true, flag6 = true, flag7 = true, flag8 = true, flag9 = true;
     int edificio, piso, salon, clave, matricula, semestre, numclases, claveclase, horae, horas;
     string nombre;
     ifstream archEnt1, archEnt2;
@@ -248,20 +248,158 @@ int main(){
                 for (int i = 0; i < numclases; i++) {
                     if(horae == clases[i].getHoraEnt().getHora() && minutose == clases[i].getHoraEnt().getMinutos()){
                         flag5 = false;
-
+                        cout << "Clase " << i+1 << ": " << endl;
+                        cout << "Nombre: " << clases[i].getNombreMateria() << "     claveClase: "
+                             << clases[i].getClaveClase() << endl;
+                        cout << "Hora de entrada: ";
+                        clases[i].getHoraEnt().muestra();
+                        cout << "       Hora de salida: ";
+                        clases[i].getHoraSal().muestra();
+                        cout << "\n";
+                        salones[clases[i].getPos()].muestra();
                     }
                 }
 
                 if(flag5){
-                    cout << "No hay no"
+                    cout << "No hay clases a esa hora\n";
                 }
 
                 break;
 
+            case 4:
+
+                cout << "Ingrese la clave de la clase a buscar: ";
+                cin >> claveclase;
+
+                flag6 = true;
+                for (int i = 0; i < numclases && flag6; i++) {
+                    if(claveclase == clases[i].getClaveClase()){
+
+                        cout << "Clase " << i+1 << ": " << endl;
+                        cout << "Nombre: " << clases[i].getNombreMateria() << "     claveClase: "
+                             << clases[i].getClaveClase() << endl;
+                        cout << "Hora de entrada: ";
+                        clases[i].getHoraEnt().muestra();
+                        cout << "       Hora de salida: ";
+                        clases[i].getHoraSal().muestra();
+                        cout << "\n";
+                        salones[clases[i].getPos()].muestra();
+                        cout << "Alumnos inscritos\n";
+
+                        for (int j = 0; j < clases[i].getNumLugares(); j++) {
+
+                            for (int k = 0; k < 15; k++) {
+                                if(clases[i].getListaAlumno(j) == alumnos[k].getMatricula()){
+                                    alumnos[k].muestra();
+                                    break;
+                                }
+                            }
+                        }
+
+                        flag6 = false;
+                    }
+                }
+
+                break;
+
+            case 5:
+
+                //Preguntar por la clave del salon
+                cout << "Ingrese la clave del salon: ";
+                cin >> clave;
+
+                flag = true;
+
+                for (int j = 0; j < 5 && flag; j++) {
+                    if (clave == salones[j].getClavesalon()) {
+                        flag = false;
+                    }
+                    pos = j;
+                }
+                //Comprobar si existe la clave
+                while (flag) {
+                    cout << "Clave no encontrada ingrese otra clava por favor: ";
+                    cin >> clave;
+
+                    flag = true;
+
+                    for (int j = 0; j < 5 && flag; j++) {
+                        if (clave == salones[j].getClavesalon()) {
+                            flag = false;
+                        }
+                        pos = j;
+                    }
+                }
+
+                flag7 = true;
+
+                for (int i = 0; i < numclases; i++) {
+                    if(salones[pos].getClavesalon() == clases[i].getClaveSalon()){
+                        cout << "Clase " << i+1 << ": " << endl;
+                        cout << "Nombre: " << clases[i].getNombreMateria() << "     claveClase: "
+                             << clases[i].getClaveClase() << endl;
+                        cout << "Hora de entrada: ";
+                        clases[i].getHoraEnt().muestra();
+                        cout << "       Hora de salida: ";
+                        clases[i].getHoraSal().muestra();
+                        cout << "\n";
+                        salones[clases[i].getPos()].muestra();
+                        flag7 = false;
+                    }
+                }
+
+                if(flag7){
+                    cout << "No hay ninguna clase registrada con esa clave de salon\n";
+                }
+                break;
+
+            case 6:
+                //Pedir la matricula del alumno
+                cout << "Ingrese la matricula del alumno a buscar: ";
+                cin >> matricula;
+                flag8 = true;
+                flag9 = true;
+                for(int i = 0; i < 15 && flag8; i++){
+                    if(matricula == alumnos[i].getMatricula()){
+                        alumnos[i].muestra();
+
+                        for (int j = 0; j < numclases; j++) {
+                            for (int k = 0; k < clases[j].getNumLugares(); ++k) {
+                                if(matricula == clases[j].getListaAlumno(k)){
+                                    cout << "Clase " << j+1 << ": " << endl;
+                                    cout << "Nombre: " << clases[j].getNombreMateria() << "     claveClase: "
+                                         << clases[j].getClaveClase() << endl;
+                                    cout << "Hora de entrada: ";
+                                    clases[j].getHoraEnt().muestra();
+                                    cout << "       Hora de salida: ";
+                                    clases[j].getHoraSal().muestra();
+                                    cout << "\n";
+                                    salones[clases[j].getPos()].muestra();
+                                    flag9 = false;
+                                }
+                            }
+                        }
+
+
+                        flag8 = false;
+                    }
+                }
+
+                if(flag8){
+                    cout << "La matricula que proporciono no esta asociada a ningun alumno\n";
+                }
+                if(flag9){
+                    cout << "El alumno no tiene materias inscritas\n";
+                }
+                break;
+            default:
+                cout << "Opcion incorrecta ingrese otro numero\n";
+                break;
         }
 
     } while (op != 7);
 
+    cout << "Gracias por usar nuestro programa\n";
 
     return 0;
 }
